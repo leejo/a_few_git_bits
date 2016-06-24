@@ -1,9 +1,9 @@
 prompt info
 aliases + ignore
-WIP branches + squash merge
+WIP branches + squash merge (demo git co -)
 reasons is no failing commits on master = bisects
-write good commit messages - git-mean-commit-message-bytes
-interactive rebase
+interactive rebase for more involved squash
+write good commit messages - git-mean-commit-message-bytes (commit rot)
 git-wtf
 git timesheet
 git-dir-blame
