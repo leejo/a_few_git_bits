@@ -1,1 +1,5 @@
+A few git usage tips i've picked up over the years. From utility scripts to
+actual git commands and general workflow. This will focus on the command
+line usage of git, rather than any particular GUI.
+
 cat all the various README files for slides and usage examples
