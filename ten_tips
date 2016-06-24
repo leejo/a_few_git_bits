@@ -1,0 +1,10 @@
+prompt info
+aliases + ignore
+WIP branches + squash merge
+reasons is no failing commits on master = bisects
+write good commit messages - git-mean-commit-message-bytes
+interactive rebase
+git-wtf
+git timesheet
+git-dir-blame
+git-extras
