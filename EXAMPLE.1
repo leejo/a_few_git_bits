@@ -1,0 +1,29 @@
+parse_git_branch_for_prompt ()
+{
+        if git rev-parse --git-dir >/dev/null 2>&1
+        then
+                if [ "$UNAME" == "Linux" ]; then
+                    gitver=$(git branch 2>/dev/null| sed -n '/^\* /p' | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g; s/^\* [[0-9]+] //")
+                else
+                    gitver=$(git branch 2>/dev/null| sed -n '/^\* /p' | sed "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g; s/^\* [[0-9]+] //")
+                fi
+                stashed=$(git stash list | grep -c " [Oo]n $gitver:")
+                if git diff --quiet 2>/dev/null >&2 
+                then
+                        gitver=${c_green}$gitver${c_sgr0}
+                else
+                        gitver=${c_red}$gitver${c_sgr0}
+                fi
+        else
+                return 0
+        fi
+
+        if [ "$stashed" != "0" ]; then
+                echo "$gitver $stashed"
+        else
+                echo $gitver
+        fi
+}
+
+# user@host jobs command git-branch-status cwd
+PS1='\n[\u@\h J\j C\! \t $(parse_git_branch_for_prompt)]\n$PWD > '
