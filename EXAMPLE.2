@@ -1,0 +1,13 @@
+[alias]
+	dtree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --decorate --abbrev-commit --date=relative --date-order
+	timesheet = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --decorate --abbrev-commit --date=relative --date-order --author=Lee --since=\"26 Hours ago\"
+	st = status -sb
+	ci = commit
+	co = checkout
+	br = !git branch -vv
+	rso = remote show origin
+	verbs = !git log --pretty=format:'%s' | cut -d \" \" -f 1 |  tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -n
+	me = log --oneline --no-merges --all --author=Lee
+
+# ignore them in your command line history
+export HISTIGNORE='? :?? :git @(pull|push|ci|co|st|diff|log|tree|dtree):ls:ls -l:&'
