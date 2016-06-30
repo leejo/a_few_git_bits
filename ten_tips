@@ -1,5 +1,5 @@
 1) prompt info
-2) aliases + ignore
+2) aliases + ignore (project specific config, e.g. https://github.com/dbsrgits/dbix-class/commit/1f99022a)
 3) WIP branches + squash merge (demo git co -)
 4) reason is no failing commits on master = bisects
 5) interactive rebase for more involved squash
