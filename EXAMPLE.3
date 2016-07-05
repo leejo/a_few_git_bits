@@ -1,0 +1,56 @@
+* | | | 8ad152b - add tenant and balance info to P::M::Property class (5 hours ago) <Lee Johnson>
+| * | |
+| |\ \ \
+| | | | | * 14c000c - (lee/update_mojo_public_section_prop_tenant_WIP) WIP done (5 hours ago) <Lee Johnson>
+| | * | | |
+| | * | | |
+| | * | | |
+| | * | | |
+| * | | | |
+| |\ \ \ \ \
+| | |_|_|/ /
+| |/| | | |
+| | * | | |
+| |/ / / /
+| | | | * ebf9b2e - (origin/lee/update_mojo_public_section_prop_tenant_WIP) tenant + tenant balance info WIP (23 hours ago) <Lee Johnson>
+| |_|_|/
+|/| | |
+| | * |
+| * | |
+| |\ \ \
+* | \ \ \   3f987da - Merge branch 'master' into lee/update_mojo_public_section (29 hours ago) <Lee Johnson>
+
+----------------------------------------------------
+
+commit 14c000cd4f2db815db4e334bc6c2ebda52d49fa7
+Author: Lee Johnson <lee@givengain.ch>
+Date:   Tue Jul 5 10:29:22 2016 +0200
+
+    WIP done
+
+commit ebf9b2efe77563c78ca4df3ac5683ad5696eb3fb
+Author: Lee Johnson <lee@givengain.ch>
+Date:   Mon Jul 4 16:57:45 2016 +0200
+
+    tenant + tenant balance info WIP
+
+    WIP as some tests failing
+
+----------------------------------------------------
+
+commit 8ad152b6adf58e5930da33d3adb0f9dfe573bc1f
+Author: Lee Johnson <lee@givengain.ch>
+Date:   Tue Jul 5 10:31:41 2016 +0200
+
+    add tenant and balance info to P::M::Property class
+
+    flesh out the swagger2 spec to include the details returned as part
+    of the /properties endpoints and Property/Tenant objects
+
+    usefully some of the code we've written already can be reused such
+    as the ->tenant_balance method on P::M::Contribution::History
+
+    note deprecation of email_address field in JSON in favour of email
+    to standardise with other entities
+
+    update tests to reflect above changes and update API docs
