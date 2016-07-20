@@ -1,46 +1,9 @@
-github trending repo commit lengths (last 200 commits for each):
 
-/juliangarnier/anime                     --->ALL 111
-/git-tips/tips                           --->ALL 144
-/guarinogabriel/Mac-CLI                  --->ALL 139
-/getify/You-Dont-Know-JS                 --->ALL 157
-/chmln/flatpickr                         --->ALL 144
-/vhf/free-programming-books              --->ALL 147
-/kataras/iris                            --->ALL 155
-/alibaba/weex                            --->ALL 177
-/algolia/places                          --->ALL 199
-/sahat/megaboilerplate                   --->ALL 133
-/open-source-society/data-science        --->ALL 112
-/tensorflow/tensorflow                   --->ALL 256
-/joshbuchea/HEAD                         --->ALL 146
-/Microsoft/monaco-editor                 --->ALL 127
-/henryboldi/felony                       --->ALL 115
-/NamPNQ/You-Dont-Need-Javascript         --->ALL 127
-/olistic/warriorjs                       --->ALL 122
-/shadowsocks/Potatso                     --->ALL 88
-/airbnb/hypernova                        --->ALL 224
-/facebook/react                          --->ALL 280
-/twbs/bootstrap                          --->ALL 209
-/d3/d3                                   --->ALL 102
-/luruke/barba.js                         --->ALL 112
-/vuejs/vue                               --->ALL 144
-/cht8687/You-Dont-Need-Lodash-Underscore --->ALL 116
-                                    MEAN ===>    151  😞
+git bisect:
 
-So the "average" commit message looks something like this:
-
-commit 2bda99c18a0372eed02472e9d318676e180281da
-Author: Some Person <someper@gmail.com>
-Date:   Tue Sep 14 17:00:00 2010 -0100
-
-    Here is the commit detail, sometimes a ticket ref but thats about it
-
-----------------------------------------------------
-
-Since i know you will ask (again last 200 commits):
-
-linux  --->ALL 1032  😮
-go     --->ALL 622   😄
-perl5  --->ALL 356   😚
-rust   --->ALL 197   😐
-?????  --->ALL 130   😱
+    * git bisect bad $sha_were_bug_appears
+    * git bisect good [$sha_were_all_was_good]
+    * git bisect run $command_that_runs_tests
+    * make tea
+    * see commit that broke tests (thus the source of bug?)
+    * fix the bug
