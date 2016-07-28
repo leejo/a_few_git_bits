@@ -4,11 +4,11 @@
 4) reason (for 3) is no failing commits on master = bisects
 5) interactive rebase for more involved squash
 6) write good commit messages - git-mean-commit-message-bytes (commit rot)
-7) git-wtf
+7) branches / git-wtf / git-publish-branch
 8) git timesheet
 9) git-dir-blame
 10) git-extras
 
 TODO:
 
-move by git_tools code into its own repo that is publicly accessible
+move my git_tools code into its own repo that is publicly accessible

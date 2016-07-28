@@ -1,0 +1,38 @@
+
+branches
+
+    * branch lots!
+    * no really, lots!
+    * LOTS DAMMIT!
+    * you'll need to keep track, so:
+        * git branch -vv # better than git branch
+        * git-wtf and git-publish-branch
+
+git-wtf
+
+    * originally: https://github.com/michaelklishin/git-wtf
+        * my fork is at: https://github.com/leejo/git-tools
+
+    * at a glance view of branch status
+        * merged / not merged
+        * local only / remote
+        * commits 
+        * age
+
+    * can take a ~/.git-wtfrc file for config
+        * defined the integration branches
+        * match only specific branches (maybe i added that feature...)
+
+git-publish-branch
+
+    * easy publish/revoke of branches to the remote
+
+    * git-publish-branch -d <branch_name>
+        * locally
+
+    * git-publish-branch -D <branch_name>
+        * remotely
+
+    * better than git push origin :<branch_name>
+    * or even git push origin --delete <branch_name>
+        * is that even correct? i've been using git-publish-branch for so long...
