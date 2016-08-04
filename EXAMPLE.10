@@ -1,0 +1,53 @@
+
+git-summary
+
+    [leejohnson@MacBook-Pro-de-Lee J0 C10022 09:56:48 * blead]
+    /Users/leejohnson/working/perl > ~/working/git-extras/bin/git-summary
+
+     project  : perl
+     repo age : 29 years
+     active   : 6933 days
+     commits  : 63463
+     files    : 5922
+     authors  :
+      8975  Jarkko Hietaniemi                                                   14.1%
+      6531  Nicholas Clark                                                      10.3%
+      6313  Father Chrysostomos                                                 9.9%
+      5258  Karl Williamson                                                     8.3%
+      3056  Rafael Garcia-Suarez                                                4.8%
+      2846  Gurusamy Sarathy                                                    4.5%
+      1923  David Mitchell                                                      3.0%
+      1659  Steve Hay                                                           2.6%
+      1220  Nick Ing-Simmons                                                    1.9%
+      1204  Craig A. Berry                                                      1.9%
+      1169  Chris 'BinGOs' Williams                                             1.8%
+       911  Tony Cook                                                           1.4%
+       846  Ricardo Signes                                                      1.3%
+       732  Perl 5 Porters                                                      1.2%
+       727  Steve Peters                                                        1.1%
+      ...
+
+git-effort
+
+    [leejohnson@MacBook-Pro-de-Lee J0 C10016 09:53:26 * blead]
+    /Users/leejohnson/working/perl > ~/working/git-extras/bin/git-effort --above 15 *.c
+
+      path                                          commits    active days
+
+      av.c......................................... 230         207
+      deb.c........................................ 78          74
+      doio.c....................................... 609         496
+      doop.c....................................... 298         252
+      dump.c....................................... 602         481
+      globals.c.................................... 47          44
+      gv.c......................................... 840         623
+      hv.c......................................... 631         465
+      ...
+
+git-authors
+
+    auto populate AUTHORS
+
+git-obliterate
+
+    "oops, i really shouldn't have commit that file"
