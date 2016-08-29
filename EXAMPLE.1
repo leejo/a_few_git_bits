@@ -1,11 +1,19 @@
+# beware the control chars (copy paste might not DTRT here)
+c_red='[31m'
+c_green='[32m'
+c_sgr0='[00m'
+
+export UNAME=`uname`
+
 parse_git_branch_for_prompt ()
 {
         if git rev-parse --git-dir >/dev/null 2>&1
         then
+				# find the current branch (is prefixed with a *)
                 if [ "$UNAME" == "Linux" ]; then
-                    gitver=$(git branch 2>/dev/null| sed -n '/^\* /p' | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g; s/^\* [[0-9]+] //")
+                    gitver=$(git branch 2>/dev/null| sed -n '/^\* /p' | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g; s/^\* //")
                 else
-                    gitver=$(git branch 2>/dev/null| sed -n '/^\* /p' | sed "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g; s/^\* [[0-9]+] //")
+                    gitver=$(git branch 2>/dev/null| sed -n '/^\* /p' | sed "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g; s/^\* //")
                 fi
                 stashed=$(git stash list | grep -c " [Oo]n $gitver:")
                 if git diff --quiet 2>/dev/null >&2 
